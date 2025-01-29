@@ -8,10 +8,12 @@ import { useState } from "react"
 import "./Login.css"
 
 
-const Login = () => {
+const Login = ({setIsLogin}) => {
 
         const [username,setUsername]=useState("");
         const [password,setPassoword]=useState("");
+
+   
 
         const handleSubmit=(e)=>{
             e.preventDefault();
@@ -58,7 +60,7 @@ const Login = () => {
         <button>Entrar</button>
 
         <div className="signup-link">
-            <p>Não tem uma conta? <a href="#">Registrar</a></p>
+            <p>Não tem uma conta? <a href="#" onClick={()=>{setIsLogin(true)}}>Registrar</a></p>
         </div>
 
         </form>
