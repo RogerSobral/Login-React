@@ -1,23 +1,53 @@
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import Login from './components/login/Login';
+import Register from './components/login/Register';
+import Sidebar from './components/Sidebar';
 
-import './App.css'
-import Login from './components/login/Login'
-import Register from './components/login/Register'
-import { useState } from 'react'
+// Pages
+import Dashboard from './pages/Dashboard';
+import Product from './pages/Product';
+import ProductList from './pages/ProductList';
+import Analytics from './pages/Analytics';
+import About from './pages/About';
+import ListShopping from './pages/ListShopping';
+import Friends from './pages/Friends';
 
+import { useState } from 'react';
 
 function App() {
-
-  const [isLogin, setIsLogin]=useState(false)
+  const [isLogin, setIsLogin] = useState(false);
+  const [isRegister, setRegister] = useState(true); // Começa como `false` para exibir Login primeiro
 
   return (
     <div className="App">
-
-      
-      {isLogin ?<Register setIsLogin={setIsLogin}/>:  <Login setIsLogin={setIsLogin} />   }
-     
+      {isLogin ? (
+        <>
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/productList" element={<ProductList />} />
+            <Route path="/listShopping" element={<ListShopping />} />
+            <Route path="/friends" element={<Friends />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </>
+      ) : isRegister ? (
+        <Login setIsLogin={setIsLogin} setRegister={setRegister} />
+      ) : (
+        <Register setRegister={setRegister} />
+        
+      )}
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
+
+
+
+
+// instalar
+// npm install @types/react-router-dom

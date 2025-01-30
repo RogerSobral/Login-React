@@ -8,7 +8,7 @@ import { useState } from "react"
 import "./Login.css"
 
 
-const Login = ({setIsLogin}) => {
+const Login = ({setIsLogin,setRegister}) => {
 
         const [username,setUsername]=useState("");
         const [password,setPassoword]=useState("");
@@ -60,7 +60,7 @@ const Login = ({setIsLogin}) => {
         <button>Entrar</button>
 
         <div className="signup-link">
-            <p>Não tem uma conta? <a href="#" onClick={()=>{setIsLogin(true)}}>Registrar</a></p>
+            <p>Não tem uma conta? <a href="#" onClick={()=>{setRegister(false)}}>Registrar</a></p>
         </div>
 
         </form>

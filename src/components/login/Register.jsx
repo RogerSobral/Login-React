@@ -4,7 +4,7 @@ import { BsAt } from "react-icons/bs";
 import { BsBackspaceFill } from "react-icons/bs";
 import "./Login.css"
 
-const Register = ({setIsLogin}) => {
+const Register = ({setRegister}) => {
   return (
     <div className="container">
         <form action="">
@@ -35,7 +35,7 @@ const Register = ({setIsLogin}) => {
         <button>Cadastrar</button>
 
         <div className="signup-link">
-            <p><BsBackspaceFill/> <a href="#" onClick={()=>setIsLogin(false)}> Voltar </a></p>
+            <p><BsBackspaceFill/> <a href="#" onClick={()=>setRegister(true)}> Voltar </a></p>
         </div>
 
         </form>
