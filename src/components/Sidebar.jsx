@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
+  FaBars,
   FaCommentAlt,
   FaRegChartBar,
   FaShoppingBag,
@@ -8,9 +9,14 @@ import {
   FaThList,
   FaUserAlt,
 }from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
 
-
-const Slidebar = () => {
+const Slidebar = ({children}) => {
+  
+  const[isOpen,setIsOpen]=useState(false)
+  // Vai inverter a isOpen
+  const toggle =()=>setIsOpen(!isOpen)
+  
   const menuItem=[
   {
     path:"/",
@@ -50,10 +56,31 @@ const Slidebar = () => {
 ]
   return (
     <div className='container_menu'> 
-           <h1>sei la</h1>
+           <div  style={{width:isOpen? "300px":"50px"}} className="sidebar" >
+              <div className="top_section">
+
+                <h1 style={{display: isOpen ? "block":"none"}}   className='logo'>Logo</h1>
+
+                <div style={{marginLeft: isOpen ? "block":"none"}}   className="bars">
+                  <FaBars onClick={toggle}/>
+                </div>
+              </div>
+              {/* Menu */}
+              {menuItem.map((item,index)=>(
+                <NavLink to={item.path} 
+                key={index} 
+                className="link" 
+                activeclassName="active">
+
+                  <div className="icon">{item.icon}</div>
+                  <div className="link_text">{item.name}</div>
+                </NavLink>
+             ))}
+           </div>
+           <main>{children}</main>
 
     </div>
-  )
+  );
 }
 
 export default Slidebar

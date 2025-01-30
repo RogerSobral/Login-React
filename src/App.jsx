@@ -20,27 +20,29 @@ function App() {
   const [isRegister, setRegister] = useState(true); // Começa como `false` para exibir Login primeiro
 
   return (
-    <div className="App">
+    <>
       {isLogin ? (
-        <>
-          <Sidebar />
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/product" element={<Product />} />
-            <Route path="/productList" element={<ProductList />} />
-            <Route path="/listShopping" element={<ListShopping />} />
-            <Route path="/friends" element={<Friends />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </>
+        <div className='container_body'>
+          <Sidebar>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/product" element={<Product />} />
+              <Route path="/productList" element={<ProductList />} />
+              <Route path="/listShopping" element={<ListShopping />} />
+              <Route path="/friends" element={<Friends />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </Sidebar>
+        </div>
       ) : isRegister ? (
-        <Login setIsLogin={setIsLogin} setRegister={setRegister} />
+        <div className="app_login"><Login setIsLogin={setIsLogin} setRegister={setRegister} /></div>
+        
       ) : (
-        <Register setRegister={setRegister} />
+        <div className="app_login"><Register setRegister={setRegister} /></div>
         
       )}
-    </div>
+    </>
   );
 }
 
