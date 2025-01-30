@@ -17,7 +17,11 @@ const Login = ({setIsLogin,setRegister}) => {
 
         const handleSubmit=(e)=>{
             e.preventDefault();
-            alert("Enviando os dados: "+ username+" - "+ password);
+            if ("carlos@gmail.com"==username &&password==="1"){
+              setIsLogin(true)
+              alert("Enviando os dados: "+ username+" - "+ password);
+            }
+            
     
         }
 
