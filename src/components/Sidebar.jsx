@@ -13,9 +13,9 @@ import { NavLink } from 'react-router-dom';
 
 const Slidebar = ({children}) => {
   
-  const[isOpen,setIsOpen]=useState(false)
+  const[isOpen,setIsOpen]=useState(false);
   // Vai inverter a isOpen
-  const toggle =()=>setIsOpen(!isOpen)
+  const toggle =()=>setIsOpen(!isOpen);
   
   const menuItem=[
   {
@@ -56,14 +56,18 @@ const Slidebar = ({children}) => {
 ]
   return (
     <div className='container_menu'> 
-           <div  style={{width:isOpen? "300px":"50px"}} className="sidebar" >
+           <div  style={{width: isOpen ? "250px":"50px"}} className="sidebar" >
+
               <div className="top_section">
 
                 <h1 style={{display: isOpen ? "block":"none"}}   className='logo'>Logo</h1>
 
-                <div style={{marginLeft: isOpen ? "block":"none"}}   className="bars">
+                <div style={{marginLeft: isOpen ? "50px":"0"}}   className="bars">
+
                   <FaBars onClick={toggle}/>
                 </div>
+             
+             
               </div>
               {/* Menu */}
               {menuItem.map((item,index)=>(
@@ -73,7 +77,7 @@ const Slidebar = ({children}) => {
                 activeclassName="active">
 
                   <div className="icon">{item.icon}</div>
-                  <div className="link_text">{item.name}</div>
+                  <div style={{display: isOpen ? "block":"none"}}   className="link_text">{item.name}</div>
                 </NavLink>
              ))}
            </div>
