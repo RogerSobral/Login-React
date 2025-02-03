@@ -1,0 +1,20 @@
+.container_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 10px;
+    padding:10px ;
+   
+}
+
+
+
+
+
+
+.container_header h1{
+    color: #2a87f4;
+}
