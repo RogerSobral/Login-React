@@ -10,7 +10,7 @@ import {
   FaUserAlt,
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
-
+import './Slidebar.css'
 const Slidebar = ({children}) => {
   
   const[isOpen,setIsOpen]=useState(false);
@@ -54,21 +54,22 @@ const Slidebar = ({children}) => {
     icon:<FaUserAlt/>
   },
 ]
+
   return (
     <div className='container_menu'> 
            <div  style={{width: isOpen ? "250px":"50px"}} className="sidebar" >
 
               <div className="top_section">
 
-                <h1 style={{display: isOpen ? "block":"none"}}   className='logo'>Logo</h1>
+                  <h1 style={{display: isOpen ? "block":"none"}}   className='logo'>Logo</h1>
 
-                <div style={{marginLeft: isOpen ? "50px":"0"}}   className="bars">
-
-                  <FaBars onClick={toggle}/>
-                </div>
+                  <div style={{marginLeft: isOpen ? "50px":"0"}}   className="bars">
+                      <FaBars onClick={toggle}/>
+                  </div>
              
              
               </div>
+
               {/* Menu */}
               {menuItem.map((item,index)=>(
                 <NavLink to={item.path} 

@@ -1,20 +1,67 @@
-.container_header{
+.container_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    margin: 10px;
+    margin-bottom: 15px;
     border-radius: 10px;
-    padding:10px ;
-   
+    padding: 10px;
 }
 
 
-
-
-
-
 .container_header h1{
-    color: #2a87f4;
+    color: lightskyblue;
+}
+
+.icon_header{
+    color: lightskyblue;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.input{
+    height: 50px;
+    border: 1px solid lightskyblue;
+    color: lightskyblue;
+    text-shadow: none;
+    font-weight: bolder;
+}
+
+
+/* Responsividade para telas médias (tablets) */
+@media (max-width: 768px) {
+    .container_header {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Alinha os itens à esquerda */
+        padding: 15px; /* Aumenta o preenchimento */
+    }
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .container_header {
+        flex-direction: column; /* Mantém a direção em coluna */
+        align-items: center; /* Alinha os itens à esquerda */
+        padding: 20px; /* Aumenta o preenchimento */
+    }
+
+    /* Ajusta o espaçamento entre os itens */
+    .container_header > * {
+        margin-bottom: 10px; /* Espaço entre os itens */
+    }
+
+    /* Remove a margem inferior do último item */
+    .container_header > *:last-child {
+        margin-bottom: 0; /* Remove a margem do último item */
+    }
+}
+
+/* Responsividade para telas grandes (desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container_header {
+        flex-direction: row; /* Mantém a direção em linha */
+        justify-content: space-between; /* Espaço entre os itens */
+        padding: 15px; /* Ajusta o preenchimento */
+    }
 }

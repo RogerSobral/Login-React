@@ -13,7 +13,7 @@
 
 .icon_card{
    font-size: 3em;
-   color: #2a87f4;
+   color: lightskyblue;
    margin-left: 15px;
 }
 
@@ -31,5 +31,5 @@ width: 150px;
 
 .body_card p, h3{
     font-size: 1em;
-    color: #2a87f4;;
+    color: rgb(111, 179, 221);;
 }

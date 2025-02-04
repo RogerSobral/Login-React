@@ -1,4 +1,6 @@
-
+.page{
+    width: 100%;
+}
 
 
 .display_info {
@@ -6,15 +8,14 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap; /* Garante que os elementos se ajustem em telas menores */
-    gap: 16px; /* Espaço entre os elementos */
+    gap: 10px; /* Espaço entre os elementos */
 }
 
-.charts{
+.charts {
     display: flex;
-}
+    flex-direction: row;
+    justify-content: space-around;
 
-.chart{
-    width: 20%;
 }
 
 /* Responsividade para telas médias (tablets) */
@@ -23,6 +24,12 @@
         flex-direction: column; /* Empilha os itens verticalmente em telas menores */
         align-items: center; /* Centraliza os itens */
     }
+
+    .charts {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens */
+        justify-content: center;
+    }
 }
 
 /* Responsividade para telas pequenas (celulares) */
@@ -30,6 +37,40 @@
     .display_info {
         flex-direction: column;
         align-items: center;
-        gap: 12px;
+       
+    }
+
+    .charts {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens */
+        justify-content: center;
+    }
+}
+
+/* Responsividade para telas grandes (desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .display_info {
+        flex-direction: row; /* Mantém a disposição em linha para telas maiores */
+        justify-content: space-between; /* Espaço entre os elementos */
+    }
+
+    .charts {
+        flex-direction: row; /* Mantém a disposição em linha para telas maiores */
+        justify-content: space-between; /* Espaço entre os gráficos */
+        justify-content: center;
+    }
+}
+
+/* Responsividade para telas muito grandes (grandes desktops) */
+@media (min-width: 1025px) {
+    .display_info {
+        flex-direction: row; /* Mantém a disposição em linha para telas muito grandes */
+        justify-content: space-around; /* Espaço ao redor dos elementos */
+    }
+
+    .charts {
+        flex-direction: row; /* Mantém a disposição em linha para telas muito grandes */
+        justify-content: space-around; /* Espaço ao redor dos gráficos */
+        justify-content: center;
     }
 }

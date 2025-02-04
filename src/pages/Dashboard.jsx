@@ -5,6 +5,8 @@ import '../css/Page.css'
 import Header from "../components/Header";
 import LineChart from "../components/LineChart";
 import PieChart from "../components/PieChart";
+
+
 const Dashboard = () => {
   const dataCards=[
     {icon:<FaChalkboard/>,
@@ -21,7 +23,7 @@ const Dashboard = () => {
     },
     {icon:<FaChalkboard/>,
       value:5,
-      descript:"Conexões",
+      descript:"Fornecedores",
     }
 
 
@@ -30,19 +32,23 @@ const Dashboard = () => {
   return (
     <div className='page'> 
     
-    <Header/>
+        <Header/>
 
-    <div className="display_info"> 
-        {dataCards.map((card, index)=>(
-          <Card id={index} card={card}/>
-        ))}
-        
-    </div>
-    <div className="charts">
-      <LineChart className="chart"/>
-      <PieChart className="chart"/>
+        <div className="display_info"> 
+            {dataCards.map((card, index)=>(
+              <Card id={index} card={card}/>
+            ))}
+            
+        </div>
+        <div className="charts">
+            <LineChart className="chart"/>
+            <PieChart className="chart"/>
 
-    </div>
+        </div>
+
+      
+
+
     </div>
   )
 }

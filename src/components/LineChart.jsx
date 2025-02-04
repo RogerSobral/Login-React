@@ -4,6 +4,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import './Chart.css';
 
 // Registrar os componentes necessários do Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
@@ -36,7 +37,7 @@ const LineChart = () => {
   };
 
   return (
-    <div style={{ width: '80%', margin: '0 auto' }}>
+    <div className='chart'>
       <Line data={data} options={options} />
     </div>
   );

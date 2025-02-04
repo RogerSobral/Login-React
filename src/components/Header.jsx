@@ -1,7 +1,10 @@
+// npm install --save font-awesome
+//npm install react-datepicker date-fns
 import React from 'react';
 import './Header.css';
 
 import {FaCog}from "react-icons/fa";
+import DateInput from './DateInput';
 
 const Header = () => {
   return (
@@ -9,10 +12,10 @@ const Header = () => {
         <h1 className='title'>Dashboard</h1>
    
      
-       <input type="date" name="" id="" />
+       {/* <input type="date" name="" id="input" className='input' /> */}
      
-     
-      <select className='month_selector'>
+     <DateInput/>
+      <select className='input'>
         <option value="">Selecione o mês</option>
         <option value="janeiro">Janeiro</option>
         <option value="fevereiro">Fevereiro</option>
@@ -28,7 +31,7 @@ const Header = () => {
         <option value="dezembro">Dezembro</option>
       </select>
       
-      <div><FaCog/></div>
+      <div className='icon_header'><FaCog/></div>
     </div>
   );
 }
