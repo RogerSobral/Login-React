@@ -1,6 +1,8 @@
 .date-input-container {
     position: relative; /* Para posicionar o ícone */
     display: inline-block; /* Para que o contêiner se ajuste ao tamanho do input */
+    color: lightskyblue ;
+    text-shadow: none;
    
 }
 
@@ -12,6 +14,12 @@
     width: 100%; /* Largura total */
     text-shadow: none;
     color: lightskyblue ;
+
+    box-shadow: none;
+}
+.custom-date-input::placeholder {
+    color: lightskyblue; /* Altere para a cor desejada */
+    opacity: 1; /* Para garantir que a cor seja aplicada corretamente */
 }
 
 .calendar-icon {
@@ -19,8 +27,56 @@
     right: 10px; /* Distância da borda direita */
     top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%); /* Ajusta a posição vertical */
-    font-size: 50px; /* Aumenta o tamanho do ícone */
+    font-size: 30px; /* Aumenta o tamanho do ícone */
     color: lightskyblue; /* Cor do ícone */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     text-shadow: none;
+}
+
+
+
+
+/* Estilo do calendário */
+.react-datepicker {
+    background-color: #ffffff; /* Cor de fundo do calendário */
+  
+}
+
+/* Estilo do cabeçalho do calendário */
+.date-input-container .react-datepicker__header {
+    background-color: lightskyblue; /* Cor de fundo do cabeçalho */
+    
+
+}
+
+.date-input-container .react-datepicker__header .react-datepicker__current-month,
+.date-input-container .react-datepicker__header .react-datepicker__day-names {
+    color: white; /* Cor do texto do cabeçalho */
+    text-shadow: none; /* Remove a sombra do texto */
+}
+
+
+
+/* Estilo dos dias do calendário */
+.react-datepicker__day {
+    color: lightskyblue; /* Cor do texto dos dias */
+    text-shadow: none;
+}
+
+/* Estilo do dia selecionado */
+.react-datepicker__day--selected {
+    background-color: #007bff; /* Cor de fundo do dia selecionado */
+    color: white; /* Cor do texto do dia selecionado */
+}
+
+/* Estilo do dia atual */
+.react-datepicker__day--today {
+    font-weight: bold; /* Negrito para o dia atual */
+    color: lightskyblue;
+}
+
+/* Estilo dos dias em um intervalo selecionado */
+.react-datepicker__day--in-range {
+    background-color: #007bff; /* Cor de fundo dos dias em intervalo */
+    color: white; /* Cor do texto dos dias em intervalo */
 }
