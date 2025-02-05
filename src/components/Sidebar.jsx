@@ -57,6 +57,7 @@ const Slidebar = ({children}) => {
 
   return (
     <div className='container_menu'> 
+           
            <div  style={{width: isOpen ? "250px":"50px"}} className="sidebar" >
 
               <div className="top_section">
@@ -82,6 +83,7 @@ const Slidebar = ({children}) => {
                 </NavLink>
              ))}
            </div>
+           {/* As paginas estão aqui  */}
            <main>{children}</main>
 
     </div>

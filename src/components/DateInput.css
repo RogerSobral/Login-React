@@ -1,8 +1,14 @@
 .date-input-container {
-    position: relative; /* Para posicionar o ícone */
-    display: inline-block; /* Para que o contêiner se ajuste ao tamanho do input */
+     /* Para posicionar o ícone */
+    display: flex; /* Para que o contêiner se ajuste ao tamanho do input */
+    justify-content:flex-start;
+    align-items: center;
     color: lightskyblue ;
     text-shadow: none;
+    flex: 1;
+    gap: 15px;
+ 
+    
    
 }
 
@@ -14,7 +20,7 @@
     width: 100%; /* Largura total */
     text-shadow: none;
     color: lightskyblue ;
-
+    height: 50px;
     box-shadow: none;
 }
 .custom-date-input::placeholder {
@@ -23,9 +29,9 @@
 }
 
 .calendar-icon {
-    position: absolute; /* Posiciona o ícone */
-    right: 10px; /* Distância da borda direita */
-    top: 50%; /* Centraliza verticalmente */
+     /* Posiciona o ícone */
+    /* Distância da borda direita */
+    margin-top:  auto;
     transform: translateY(-50%); /* Ajusta a posição vertical */
     font-size: 30px; /* Aumenta o tamanho do ícone */
     color: lightskyblue; /* Cor do ícone */

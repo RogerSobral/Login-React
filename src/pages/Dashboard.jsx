@@ -5,6 +5,7 @@ import '../css/Page.css'
 import Header from "../components/Header";
 import LineChart from "../components/LineChart";
 import PieChart from "../components/PieChart";
+import BarChart from "../components/BarChart";
 
 
 const Dashboard = () => {
@@ -42,6 +43,12 @@ const Dashboard = () => {
         </div>
         <div className="charts">
             <LineChart className="chart"/>
+            <PieChart className="chart"/>
+
+        </div>
+
+        <div className="charts">
+            <BarChart className="chart"/>
             <PieChart className="chart"/>
 
         </div>

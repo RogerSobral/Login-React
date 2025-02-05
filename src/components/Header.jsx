@@ -12,9 +12,10 @@ const Header = () => {
         <h1 className='title'>Dashboard</h1>
    
      
-       {/* <input type="date" name="" id="input" className='input' /> */}
+  
      
-     <DateInput/>
+     <DateInput className="date"/>
+
       <select className='input'>
         <option value="">Selecione o mês</option>
         <option value="janeiro">Janeiro</option>
