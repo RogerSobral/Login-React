@@ -1,32 +1,39 @@
 .date-input-container {
      /* Para posicionar o ícone */
     display: flex; /* Para que o contêiner se ajuste ao tamanho do input */
-    justify-content:flex-start;
+    justify-content:center;
     align-items: center;
     color: lightskyblue ;
     text-shadow: none;
-    flex: 1;
     gap: 15px;
- 
+    
     
    
 }
 
 .custom-date-input {
-    font-size: 16px; /* Aumenta o tamanho da fonte */
-    padding: 10px 40px 10px 10px; /* Espaçamento interno */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    font-weight: 700;
+    padding: 10px 10px 10px 10px; /* Espaçamento interno */
     border: 1px solid lightskyblue; /* Borda do input */
     border-radius: 4px; /* Bordas arredondadas */
-    width: 100%; /* Largura total */
+   width: 150px;
     text-shadow: none;
     color: lightskyblue ;
     height: 50px;
     box-shadow: none;
+    text-align: center;
 }
 .custom-date-input::placeholder {
     color: lightskyblue; /* Altere para a cor desejada */
     opacity: 1; /* Para garantir que a cor seja aplicada corretamente */
 }
+
+.custom-date-input:focus {
+    border-color: rgb(105, 166, 204); /* Cor da borda quando o input está em foco */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
 
 .calendar-icon {
      /* Posiciona o ícone */
@@ -85,4 +92,12 @@
 .react-datepicker__day--in-range {
     background-color: #007bff; /* Cor de fundo dos dias em intervalo */
     color: white; /* Cor do texto dos dias em intervalo */
+}
+
+@media (max-width: 480px) {
+
+    .date-input-container{
+        justify-content: space-between;
+    }
+
 }

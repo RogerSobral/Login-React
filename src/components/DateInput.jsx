@@ -1,5 +1,5 @@
 // npm install date-fns
-
+//
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Importa os estilos do DatePicker
@@ -19,7 +19,7 @@ const DateInput = () => {
             <DatePicker
                 selected={date}
                 onChange={(date) => setDate(date)} // Atualiza o estado com a data selecionada
-                placeholderText="Selecione uma data"
+                placeholderText="__/__/____"
                 className="custom-date-input"
                 dateFormat="dd/MM/yyyy" // Formato da data
                 locale="pt-BR" // Define a localização para português

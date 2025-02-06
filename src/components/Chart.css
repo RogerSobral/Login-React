@@ -2,9 +2,8 @@
 .chart{
     width: 40%;
     flex: 1;
-    
- 
-    
+    height: 340px;  
+    max-height: 340px;
 }
 
 @media (max-width: 768px) {
@@ -49,7 +48,7 @@
 @media (min-width: 1025px) {
     .chart{
         width: 50%;
-        height: 300px;
+        height: 340px;
        
     }
 }

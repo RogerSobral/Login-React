@@ -10,11 +10,16 @@
 }
 
 
-.container_header h1 {
+.container_header .title{
     color: lightskyblue;
     flex: 1; /* Faz com que o título ocupe uma parte igual do espaço */
     text-align: center; /* Centraliza o texto */
-    background-color: blueviolet;
+   
+}
+
+.date{
+    flex: 1;
+    
 }
 
 .icon_header {
@@ -25,21 +30,30 @@
     text-align: center; /* Centraliza o ícone */
 }
 
+
+.container_input{
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+}
 .input {
+    
     height: 50px;
     border: 1px solid lightskyblue;
     color: lightskyblue;
     text-shadow: none;
     font-weight: bolder;
-    width: auto;
-    flex: 1; /* Faz com que o input ocupe uma parte igual do espaço */
+    width: 200px;
+    font-size: 1.2em;
     
+   
 }
 
 /* Responsividade para telas médias (tablets) */
 @media (max-width: 768px) {
     .container_header {
-        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        flex-direction: row; /* Muda a direção para coluna em telas menores */
+        flex-wrap: wrap;
         align-items: center; /* Alinha os itens ao centro */
         padding: 15px; /* Aumenta o preenchimento */
     }
@@ -74,6 +88,21 @@
     .container_header > *:last-child {
         margin-bottom: 0; /* Remove a margem do último item */
     }
+
+    .input {
+    
+        height: 50px;
+        border: 1px solid lightskyblue;
+        color: lightskyblue;
+        text-shadow: none;
+        font-weight: bolder;
+        width: 100%;
+        font-size: 1.2em;
+        
+       
+    }
+
+
 }
 
 /* Responsividade para telas grandes (desktops) */

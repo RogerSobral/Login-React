@@ -1,0 +1,29 @@
+/projeto
+  /frontend
+    /public
+    /src
+      /components
+      /pages
+      /services
+      App.js
+      index.js
+  /backend
+    /src
+      /config
+        - db.js
+        - redis.js
+      /controllers
+        - userController.js
+      /models
+        - userModel.js
+      /routes
+        - userRoutes.js
+      /queues
+        - emailQueue.js
+      - app.js
+    - Dockerfile
+  /infra
+    - docker-compose.yml
+    - nginx.conf
+  - .env
+  - package.json

@@ -9,13 +9,17 @@ import DateInput from './DateInput';
 const Header = () => {
   return (
     <div className='container_header'>
-        <h1 className='title'>Dashboard</h1>
+      <div className='title'>
+            <h1 >Dashboard</h1>
+      </div>
+        
    
      
   
-     
-     <DateInput className="date"/>
-
+     <div className="date">
+          <DateInput />
+     </div>
+     <div className='container_input' >
       <select className='input'>
         <option value="">Selecione o mês</option>
         <option value="janeiro">Janeiro</option>
@@ -31,7 +35,9 @@ const Header = () => {
         <option value="novembro">Novembro</option>
         <option value="dezembro">Dezembro</option>
       </select>
-      
+      </div> 
+
+
       <div className='icon_header'><FaCog/></div>
     </div>
   );

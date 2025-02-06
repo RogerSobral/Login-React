@@ -6,6 +6,7 @@ import { useState } from "react"
 
 // Importar styles
 import "./Login.css"
+import Input from "../Input";
 
 
 const Login = ({setIsLogin,setRegister}) => {
@@ -29,28 +30,26 @@ const Login = ({setIsLogin,setRegister}) => {
     <div className="container">
         <form onSubmit={handleSubmit}>
             <h1>Acesse o Sistema</h1>
-            <div className="input-field" >
-                <input 
-                type="email" 
-                placeholder="E-mail"
-                onChange={(e)=>{setUsername(e.target.value)}}
-                value={username}
-                />
-                <FaUser className="icon"
-                />
-            </div>
-        
-        <div className="input-field">
-            <input 
-            type="password" 
-            name="password"  
-            placeholder="Senha"
-            onChange={(e)=>{setPassoword(e.target.value)}}
-            value={password} />
 
-
-            <FaLock className="icon"/>
-        </div>
+            
+              <Input 
+              type={"email"} 
+              placeholder={"E-mail"} 
+              setValue={setUsername} 
+              value={username}
+              >
+                  <FaUser className="icon"/>
+              </Input>
+           
+              <Input 
+              type={"password"} 
+              placeholder={"Senha"} 
+              setValue={setPassoword} 
+              value={password}
+              >
+                  <FaLock className="icon"/>
+              </Input>
+      
 
           <div className="recall-forget">
             <label >

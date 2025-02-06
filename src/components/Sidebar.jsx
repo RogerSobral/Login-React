@@ -80,7 +80,7 @@ const Slidebar = ({children}) => {
 
                   <div className="icon">{item.icon}</div>
                   <div style={{display: isOpen ? "block":"none"}}   className="link_text">{item.name}</div>
-                </NavLink>
+                 </NavLink>
              ))}
            </div>
            {/* As paginas estão aqui  */}

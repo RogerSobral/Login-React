@@ -1,14 +1,18 @@
-.container_card{
+.container_card {
     display: flex;
     gap: 1em;
     background-color: rgb(255, 255, 255);
     flex-direction: row;
-    width: 250px;
+
+    width: 300px; 
     border-radius: 10px;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-
+    padding: 0 1em; /* Adiciona um pouco de preenchimento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para um efeito de profundidade */
+    margin-bottom: 15px;
+    margin-right: 15px;
 }
 
 .icon_card{
@@ -32,4 +36,33 @@ width: 150px;
 .body_card p, h3{
     font-size: 1em;
     color: rgb(111, 179, 221);;
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container_card {
+        width: 50%; /* Garante que o card ocupe 100% da largura em telas menores */
+        flex-direction: column; /* Muda a direção do flex para coluna se necessário */
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+        align-content:space-around
+    }
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    .container_card {
+        width: 100%; /* Garante que o card ocupe 100% da largura em telas menores */
+        flex-direction: column; /* Muda a direção do flex para coluna se necessário */
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+        align-content:space-around
+    }
+}
+
+@media (max-width: 480px) {
+    .container_card {
+        width: 100%; /* Garante que o card ocupe 100% da largura em telas menores */
+        flex-direction: column; /* Muda a direção do flex para coluna se necessário */
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+        align-content:space-around
+    }
 }

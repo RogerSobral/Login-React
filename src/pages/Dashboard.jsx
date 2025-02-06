@@ -1,7 +1,8 @@
 import {FaChalkboard,}from "react-icons/fa";
-
-import Card from '../components/Card'
 import '../css/Page.css'
+import '../css/Dashboard.css'
+import Card from '../components/Card'
+
 import Header from "../components/Header";
 import LineChart from "../components/LineChart";
 import PieChart from "../components/PieChart";
@@ -13,18 +14,22 @@ const Dashboard = () => {
     {icon:<FaChalkboard/>,
       value:12.5,
       descript:"Variação",
+      color:"#22cfcf"
     },
     {icon:<FaChalkboard/>,
       value:560.60,
       descript:"Total mês",
+      color:"#FFC534"
     },
     {icon:<FaChalkboard/>,
       value:5,
       descript:"Conexões",
+      color:"#059bff"
     },
     {icon:<FaChalkboard/>,
       value:5,
       descript:"Fornecedores",
+      color:"#9966FF"
     }
 
 
@@ -41,6 +46,8 @@ const Dashboard = () => {
             ))}
             
         </div>
+
+
         <div className="charts">
             <LineChart className="chart"/>
             <PieChart className="chart"/>

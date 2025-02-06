@@ -1,0 +1,82 @@
+.display_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Garante que os elementos se ajustem em telas menores */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+}
+
+.charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%; /* Garante que os gráficos ocupem toda a largura disponível */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+    height: auto;
+    align-items: center;
+}
+
+/* Responsividade para telas médias (tablets) */
+@media (max-width: 768px) {
+    .display_info {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .charts {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        
+    }
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .display_info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .charts {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+       
+    }
+}
+
+/* Responsividade para telas grandes (desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .display_info {
+        flex-direction: row; 
+        justify-content:center ; 
+        align-items: center;
+    }
+
+    .charts {
+        display: flex; /* Certifique-se de que o display é flex */
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; /* Centraliza os itens horizontalmente */
+        align-content: center;
+     
+        width: 100%; /* Garante que o contêiner ocupe toda a largura */
+
+    }
+}
+
+/* Responsividade para telas muito grandes (grandes desktops) */
+@media (min-width: 1025px) {
+    .display_info {
+        flex-direction: row; /* Mantém a disposição em linha para telas muito grandes */
+        justify-content: space-around; /* Espaço ao redor dos elementos */
+        align-items: center;
+    }
+
+    .charts {
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center;
+    }
+}
