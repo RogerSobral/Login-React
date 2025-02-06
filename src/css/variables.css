@@ -1,0 +1,11 @@
+:root{
+    --primary-color: #6C5CE7;    /* Roxo pastel (destaque principal) */
+    --secondary-color: #FF7675;  /* Rosa pastel (destaque secundário) */
+    --success-color: #00B894;    /* Verde pastel (sucesso) */
+    --danger-color: #D63031;     /* Vermelho pastel (perigo/erro) */
+    --warning-color: #FDCB6E;    /* Amarelo pastel (alerta) */
+    --info-color: #74B9FF;       /* Azul pastel (informação) */
+    --light-color: #F8F8F8;      /* Branco suave (fundo claro) */
+    --dark-color: #2D3436;       /* Cinza escuro (texto/destaque escuro) */
+    --text_white: #fff;
+}

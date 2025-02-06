@@ -1,3 +1,7 @@
+@import "../css/variables.css";
+
+
+
 .container_menu{
 
 display: flex;
@@ -6,12 +10,9 @@ justify-content: space-between;
 width: 100%;
 }
 
-
-
-
 .sidebar{
-    background: #000;
-    color: #fff;
+    background: var(--dark-color);
+    color: var(--text_white);
     height:100vh;
     width: 300px;
     transition: 0.5s;
